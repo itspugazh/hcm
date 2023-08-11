@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		function msg()
+		{
+			var pw1 = f1.pwd1.value; 
+    		var pw2 = f1.pwd2.value; 
+    		if(pw1 != pw2)
+    		 {  
+      		alert("password invalid.")    
+    }  
+		}
+
+	</script>
+	<title> Sign-up Window</title>
+	<style type="text/css">
+		#st1
+		{
+			position: absolute;
+			height: 550px;
+			width: 450px;
+			margin-left: 100px;
+			padding-right: 50px;
+			padding-left: 50px;
+			background-color: rgba(223, 255, 255, 0.6);
+			
+		}
+		body
+		{
+			background-image:Url("sign.jpg");
+			background-position: center;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: 1170px 700px;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+	<div class="row">
+		<nav class="navbar  navbar-inverse">
+ 		 <div class="container-fluid">
+    		<div class="navbar-header">
+      		<a class="navbar-brand" href="#">SK HEALTH CARE</a>
+    		</div>
+    	<ul class="nav navbar-nav">
+	      <li><a href="home.html">Home</a></li>
+	      <li><a href="#">About</a></li>
+	      <li><a href="#">Contact</a></li>
+	    </ul>
+    	<ul class="nav navbar-nav navbar-right">
+      		<li><a href="log_in.py"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+	    </ul>
+    
+</div>
+</nav>
+
+</div>
+<div class="row" id="row1">
+	<form name="f1" class="form-horizontal" method="POST" action="log_in.py">
+		<div align="center" id="st1">
+			<div class="form-group">
+			<h2 style="font-weight: bold;">CREATE AN ACCOUNT</h2><br><br>
+
+			<input type="text" name="name" placeholder="Your Name" class="form-control" required><br><br>
+			<input type="email" name="mail" placeholder="Your Email" class="form-control" required><br><br>
+			<input type="password" name="pwd1" placeholder="password" class="form-control" required><br><br>
+			<input type="password" name="pwd2" placeholder="Repeat your password" class="form-control" required><br>
+
+			<input type="checkbox" name="checkbox"><b> I agree all the statements in<u> Terms of Condition</u></b><br><br>
+			<button type="submit" class=" btn btn-success btn-lg" onclick="msg()">REGISTER</button><br><br>
+			<b>Have already an account?</b> <a  href="log_in.py"><b>Login here</b></a>
+		
+	</div>
+	</form>
+</div>
+</div>		
+	
+</body>
+</html>
